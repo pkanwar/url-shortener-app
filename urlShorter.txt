@@ -1,0 +1,48 @@
+GET --> api/urls --> get all urls 
+POST --> api/urls --> create a particular shortend urls
+GET --> api/urls/:id --> get a long url for a url id
+
+GET --> api/urls
+    Response
+        Body :
+        [
+            {
+                id: "",
+                long_url : "
+            },
+            {
+                id: "",
+                long_url : "
+            }
+        ]
+    Status : 200
+
+POST --> api/urls
+    Request
+        Body : 
+        {
+            long_url : ""
+        }
+    Response
+        Body :
+            {
+                id : ""
+            }
+    Status : 201
+
+
+GET --> api/urls/:id
+    Request
+        Body :
+        {
+            id : "",
+            long_url : "
+        }
+    Status : 200, 404
+
+
+
+
+
+
+        

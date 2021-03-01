@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+  
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  
+.max-width {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.container {
+  margin-top: 120px; 
+  width: 1100px;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  
+  /* navbar styling */
+  
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 30px;
+  z-index: 999;
+  background-color: #2F4F4F;
+  font-family: 'Poppins' sans-serif;
+  transition: all 0.3s ease;
+  height: 90px;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 25px;
+}
+
+.home {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+  height: 150px;
+  background-color: #F5F5F5;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px #2F4F4F;
+}
+  
+.home .title {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 800;
+  color: #2F4F4F;
+  margin-top: 0px;
+  text-decoration: underline;
+}
+  
+.home .urlShort-desc {
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 700;
+  margin-top: 0px;
+}
+
+.container .utility-grid {
+  height: 470px;
+  width: 900px;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 5px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #C0C0C0;
+}
+
+.container .utility-grid .item {
+  height: 400px;
+  width: 800px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #F5F5F5;
+  box-shadow: 3px 3px 3px 3px #2F4F4F;
+}
+
+.container .utility-grid table {
+  margin-top: 40px;
+}
+
+#longUrlInput {
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #2F4F4F; 
+  width: 700px;
+  height: 40px;
+  border: 2px solid #008B8B;
+  text-align: center;
+}
+
+#convertBtn {
+  width: 150px;
+  border-radius: 10px;
+}
+
+#clearBtn {
+  width: 150px;
+  border-radius: 10px;
+  float: right;
+}
+
+#resultTitle1 {
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin-left: 10px;
+  color: #2F4F4F;
+  width: 100%;
+}
+
+#originalUrl {
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding-left: 20px;
+  color: #2F4F4F;
+  width: 100%;
+}
+
+#shortUrl {
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #2F4F4F;
+  width: 100%;
+}
+
+.originalUrlClass {
+  width: 400px;
+  height: 80px;
+}
+
+.originalUrlTxt {
+  width: 400px;
+  height: 80px;
+  padding-top: 25px;
+  padding-left: 20px;
+  overflow-x: hidden; 
+  overflow-y: auto; 
+}
+
+.shortUrlClass {
+  width: 300px;
+  height: 80px;
+}
+
+.shortUrlTxt {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+ #getAllUrlBtn {
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.urlSection {
+  height: 200px;
+  width: 800px;
+  border-radius: 20px;
+  /* background-color: #F5F5F5; */
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  display: none;
+}
+
+#originalUrlResult {
+  width: 700px;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding-left: 20px;
+  color: #2F4F4F;
+  width: 100%;
+}
+
+#shortUrlResult {
+  width: 300px;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #2F4F4F;
+  width: 100%;
+}
+
+#table2 {  
+  display: none;
+}
+
+#table2 tbody {
+  background-color: #F5F5F5;
+}
+
+#errorSection {
+  font-size: 20px;
+  width: 800px;
+  height: 80px;
+  display: none;
+}
+
+#errorSection textarea {
+  text-align: center;
+  width: 800px;
+  padding-top: 20px;
+  height: 70px;
+  font-weight: 800;
+  color: #2F4F4F;
+}
+
+
+
+
+
+
+
+
