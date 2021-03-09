@@ -19,12 +19,16 @@ router.get('/',(req,res) => {
 
 router.post('/',(req,res) => {
     const longUrl = req.body.long_url;
-    const id = shortid.generate();
-    urls[id] = longUrl;
-    res.status(201).send({id});
+    if (req.body.long_url) {
+        const id = shortid.generate();
+        urls[id] = longUrl;
+        res.status(201).send({ id });
+    } else {
+        res.status(400).send({error: 'invalid request body'});
+    }
 })
 
-router.get('/:id',(req,res) => {
+router.get('/:id', (req, res) => {
     const id = req.params.id;
     const longUrl = urls[id];
     const response = urls[id];

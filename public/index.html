@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
-    <link rel="stylesheet" href="./css/urlShortener.css" media="all" > 
-    <link rel="stylesheet" href="./css/urlShortenerSmall.css" media="(max-width: 900px)" />
+    <link rel="stylesheet" href="./css/urlShortener.css" > 
+    <!-- <link rel="stylesheet" href="./css/urlShortenerMini.css" media="(max-width: 900px)" /> -->
     <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script type="text/javascript" defer src="./js/urlShortener.js" ></script>
@@ -45,6 +45,7 @@
                         </tr>
                         <tr>
                             <td colspan="2"><h4 class="subItem1" id="resultTitle1" >Result : </h4></td>
+
                         </tr>
                         <tr>
                             <td><span id="originalUrl" >Original URL</span></td>
@@ -52,18 +53,18 @@
                         </tr>
                         <tr>
                             <td class='originalUrlClass' ><div class="originalUrlTxt" disabled ></div></td>
-                            <td class='shortUrlClass' ><div class="shortUrlTxt" disabled ><a target="_blank" class='shortUrlLink' ></a></div></td>
+                            <td class='shortUrlClass' ><div class="shortUrlTxt"  disabled ><a target="_blank" id="shortUrlId" class='shortUrlLink' ></a></div></td>
                         </tr>
                     </tbody>
                 </table>
                 </div>
             </div>
-           
         </div>
         <div class='getAllUrls' >
             <input id="getAllUrlBtn" type="button" value="Get All Short Urls" class="btn btn-primary btn-lg active" />
         </div>
     </div>
+    
     <div id='errorSection' ><textarea disabled > No short URLs added . Please add URLs to shrink</textarea></div>
     <div class="urlSection" >
         <div class='urlTable' >
